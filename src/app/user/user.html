@@ -1,7 +1,7 @@
 <div>
-    <button>
-        <img>
-        <span>shira</span>
+    <button (click) = "changeUser()">
+        <img [src]="userImgPath">
+        <span>{{selectedUser.name}}</span>
     </button>
    
 </div>
