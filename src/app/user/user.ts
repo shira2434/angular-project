@@ -1,26 +1,25 @@
-import { Component, Input} from '@angular/core';
+import { Component , Input} from '@angular/core';
 import { USERS } from '../fake_users';
-import { input } from '../../../node_modules/@angular/core/index';
-
 @Component({
   selector: 'app-user',
   imports: [],
   templateUrl: './user.html',
   styleUrl: './user.css'
 })
-
-
 export class User {
-selectedUser = USERS[0];
+  @Input() name!: string;
+  @Input() avatar!: string;
 
-get userImgPath(){
-  return '.../Assets/users'+  this.selectedUser.avatar;
-}
-@Input() name!: string;
-@Input() avtar!: string;
+selectedUser= USERS[0];
 
-changeUser(){
-  const randomIndex=Math.floor(Math.random()*USERS.length);
-  this.selectedUser=USERS[randomIndex];
+get userImgPath() {
+  return 'Assets/users/' + this.avatar;
+  }
+  changeUser(){
+    const randomIndex = Math.floor(Math.random() * USERS.length);
+    this.selectedUser =USERS[randomIndex];
+  }
+
+                                                                                      
 }
-}
+
