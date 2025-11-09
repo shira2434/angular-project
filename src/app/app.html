@@ -17,9 +17,9 @@
     <li>
       <app-user [name]="users[4].name" [avatar]="users[4].avatar" [id]="users[4].id" (userselected)="onUserSelected($event)"></app-user>
     </li>
-    <li>
+    <!-- <li>
       <app-user [name]="users[5].name" [avatar]="users[5].avatar"[id]="users[5].id" (userselected)="onUserSelected($event)"></app-user>
-    </li>
+    </li> -->
   </ul>
   <p id="fallback">select a user to view their tasks {{selectedUser.name}}</p>
 </main>
