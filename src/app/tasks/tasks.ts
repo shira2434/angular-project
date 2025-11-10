@@ -3,14 +3,15 @@ import { fakeTasks } from './fake_tasks';
 import { Task } from './task/task';
 @Component({
   selector: 'app-tasks',
-  imports: [],
+  imports: [Task],
   templateUrl: './tasks.html',
   styleUrl: './tasks.css'
 })
 export class Tasks {
+  tasks=fakeTasks;
 @Input() name!: string;
 @Input() userId: string='';
-tasks=fakeTasks;
+
 
 
 get userSelectedTasks(){

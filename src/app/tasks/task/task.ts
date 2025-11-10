@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { input } from '../../../../node_modules/@angular/core/index';
+import { Component ,Input} from '@angular/core';
 
 
 type TaskData  ={
@@ -17,7 +16,7 @@ dueDate:string;
   styleUrl: './task.css'
 })
 export class Task {
-    @input({required :true}) task!: Task;
+    @Input({required :true}) task!: TaskData;
 }
 
 

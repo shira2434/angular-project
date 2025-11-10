@@ -1,11 +1,10 @@
 <article>
-    <h2>TASK TITLE</h2>
-    <time>TIME</time>
+    <h2>{{task.title}}</h2>s
+    <time>{{task.dueDate}}</time>
+    <p>{{task.summary}}</p>
     <p class ="actions">
         <button>Complate</button>
     </p>
-    @for(task of userSelectedTasks; track task.id){
-        <li><app-task></app-task></li>
-    }
+   
 </article>
 
